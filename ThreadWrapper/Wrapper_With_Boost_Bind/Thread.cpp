@@ -19,6 +19,7 @@ public:
     Thread(ThreadFunctionCallBack cb, string name = "Unknow")
         :m_cb(cb)
     {
+
     }
     ~Thread()
     {
@@ -29,6 +30,7 @@ public:
     {
         pthread_create(&m_ThreadID, NULL, ThreadFunction, this);
     }
+	
 
     static void* ThreadFunction(void* obj)
     {
@@ -55,5 +57,5 @@ int main()
     Test t;
     Thread thread1(boost::bind(&Test::run, &t));
     thread1.Start();
-    usleep(100);
+    usleep(1000);
 }

@@ -83,6 +83,5 @@ int main(int argc, char const *argv[])
 	TestPtr<Test1> testptr1(test1);
 	testptr->print();
 	(*testptr1).SayHello();
-
 	return 0;
 }

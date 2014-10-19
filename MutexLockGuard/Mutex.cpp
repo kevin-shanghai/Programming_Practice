@@ -58,7 +58,7 @@ private:
 void test()
 {
     MutexLock mutex;
-    MutexLockGuard lock(mutex);
+    MutexLockGuard Lock(mutex);
     int a = 0; 
     a++;
 }
